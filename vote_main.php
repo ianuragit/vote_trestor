@@ -1,23 +1,9 @@
 <html>
 <head>
 
-<script>
-function getVote(int) {
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-      document.getElementById("poll").innerHTML=xmlhttp.responseText;
-    }
-  }
-  xmlhttp.open("GET","vote_trestor.php?vote="+int,true);
-  xmlhttp.send();
-}
-</script>
+<title>
+Trestor_voting
+</title>
 </head>
 
 
@@ -46,71 +32,71 @@ echo $mac;
 
 <div id="poll">
 <h3>VOTE YOUR Preferences</h3>
-<form>
+<form action = "vote_trest.php" method="POST">
 Aman
 <br>
 1
-<input type="checkbox" name="vote" value="1" onclick="getVote(this.value)">
+<input type="checkbox" name="aman_vote" value="1"  >
 2
-<input type="checkbox" name="vote" value="2" onclick="getVote(this.value)">
+<input type="checkbox" name="aman_vote" value="2"  >
 3
-<input type="checkbox" name="vote" value="3" onclick="getVote(this.value)">
+<input type="checkbox" name="aman_voote" value="3"  >
 <br><br>
 Anurag
 <br>
 1
-<input type="radio" name="vote" value="4" onclick="getVote(this.value)">
+<input type="checkbox" name="anurag_vote" value="1"  >
 2
-<input type="radio" name="vote" value="5" onclick="getVote(this.value)">
+<input type="checkbox" name="anurag_vote" value="2"  >
 3
-<input type="radio" name="vote" value="6" onclick="getVote(this.value)">
+<input type="checkbox" name="anurag_vote" value="3"  >
 <br><br>
 Aritra
 <br>
 1
-<input type="radio" name="vote" value="7" onclick="getVote(this.value)">
+<input type="checkbox" name="aritra_vote" value="1"  >
 2
-<input type="radio" name="vote" value="8" onclick="getVote(this.value)">
+<input type="checkbox" name="aritra_vote" value="2"  >
 3
-<input type="radio" name="vote" value="9" onclick="getVote(this.value)">
+<input type="checkbox" name="aritra_vote" value="3"  >
 <br><br>
 Arpan
 <br>
 1
-<input type="radio" name="vote" value="10" onclick="getVote(this.value)">
+<input type="checkbox" name="arpan_vote" value="1"  >
 2
-<input type="radio" name="vote" value="11" onclick="getVote(this.value)">
+<input type="checkbox" name="arpan_vote" value="2"  >
 3
-<input type="radio" name="vote" value="12" onclick="getVote(this.value)">
+<input type="checkbox" name="arpan_vote" value="3"  >
 <br><br>
 Saurabh
 <br>
 1
-<input type="radio" name="vote" value="13" onclick="getVote(this.value)">
+<input type="checkbox" name="saurabh_vote" value="1"  >
 2
-<input type="radio" name="vote" value="14" onclick="getVote(this.value)">
+<input type="checkbox" name="saurabh_vote" value="2"  >
 3
-<input type="radio" name="vote" value="15" onclick="getVote(this.value)">
+<input type="checkbox" name="saurabh_vote" value="3"  >
 <br><br>
-Shiladitya
+shiladityaditya
 <br>
 1
-<input type="radio" name="vote" value="16" onclick="getVote(this.value)">
+<input type="checkbox" name="shiladitya_vote" value="1"  >
 2
-<input type="radio" name="vote" value="17" onclick="getVote(this.value)">
+<input type="checkbox" name="shiladitya_vote" value="2"  >
 3
-<input type="radio" name="vote" value="18" onclick="getVote(this.value)">
+<input type="checkbox" name="shiladitya_vote" value="3"  >
 <br><br>
 Tushar
 <br>
 1
-<input type="radio" name="vote" value="19" onclick="getVote(this.value)">
+<input type="checkbox" name="tushar_vote" value="1"  >
 2
-<input type="radio" name="vote" value="20" onclick="getVote(this.value)">
+<input type="checkbox" name="tushar_vote" value="2"  >
 3
-<input type="radio" name="vote" value="21" onclick="getVote(this.value)">
+<input type="checkbox" name="tushar_vote" value="3"  >
 <br><br>
-
+<input type="submit" value="Submit">
 </form>
 </div>
 
