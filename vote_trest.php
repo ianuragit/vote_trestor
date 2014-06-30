@@ -1,6 +1,5 @@
 <?php
 
-
 require_once('connection.php');
 
 
@@ -16,6 +15,7 @@ $tushar = $_POST['tushar_vote'];
 $filename = "vote_result.txt";
 $content = file($filename);
 
+$array = array();
 $array[0] = $aman;
 $array[1] = $anurag;
 $array[2] = $aritra;
@@ -26,10 +26,20 @@ $array[6] = $tushar;
 
 
 
+$array_string=mysql_escape_string(serialize($array));
+//$sql = "";
+//mysql_query("insert into table (column) values($array_string)",$bd);
+$sql="INSERT INTO `vote`('column') VALUES ('$array_string')";
+mysql_query($sql, $bd);
 
 
 
-$sql="INSERT INTO `vehicle_1`(`temp`, `humidity`, `lat`, `long`) VALUES ('$temp', '$humidity', '$lat', '$long')";
+/*$astring = implode("','",$array);
+$astringtwo = "'".$astring."'";
+mysql_query("insert into atable VALUES (".$astringTwo.")");*/
+
+
+
 
 if (!mysql_query($sql)) {
   die('Error: ' . mysql_error($bd));
@@ -46,4 +56,11 @@ mysql_close($bd);
 
 
 
-</table>
+
+//inserting votes to txt file
+$insertvote = $aman."||".$anurag."||".$aritra."||".$arpan."||".$saurabh."||".$shiladitya."||".$tushar;
+$fp = fopen($filename,"w");
+fputs($fp,$insertvote);
+fclose($fp);
+
+?>

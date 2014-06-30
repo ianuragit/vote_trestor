@@ -1,6 +1,5 @@
 <html>
 <head>
-
 <title>
 Trestor_voting
 </title>
