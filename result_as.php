@@ -1,8 +1,9 @@
 
 <?php
 // auto sorted results
-
+include 'login_check.php';
 // Making a connection to database
+
 require_once('connection.php');
 $i = 0  ;
 $temp_name ;

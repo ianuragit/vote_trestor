@@ -17,3 +17,17 @@ Database Structure
 					shiladitya_vote   int(11)          None
 					tushar_vote  	  int(11)          None
 					extra   		  int(11)          None
+
+
+Database for Login
+	Database Name: login
+		
+		Table Name: member
+
+			Columns:
+					  Name 				Type			Default 			Extra
+					username 		      
+					password                
+
+
+					** default username = name in all small and password = your mobile number 

@@ -1,140 +1,84 @@
-<html>
+<?php
+
+/* 
+ * Copyright2014 - Anurag Meena (ianuragit@gmail.com)
+ */
+
+	//Start session
+	session_start();	
+	//Unset the variables stored in session
+	unset($_SESSION['SESS_MEMBER_ID']);
+	unset($_SESSION['SESS_FIRST_NAME']);
+	unset($_SESSION['SESS_LAST_NAME']);
+?>
+
+
+
+
+<!DOCTYPE html>
+<!--
+  Copyright2014 - Anurag Meena (ianuragit@gmail.com)
+ -->
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> 	<html lang="en"> <!--<![endif]-->
 <head>
-<title>
-Trestor_voting
-</title>
-</head>
 
-
+	<!-- General Metas -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	<!-- Force Latest IE rendering engine -->
+	<title>Trestor</title>
+	<meta name="description" content="Voting app for Trestor foundation">
+	<meta name="author" content="Trestor foundation-Anurag Meena">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css_login/base.css">
+	<link rel="stylesheet" href="css_login/skeleton.css">
+	<link rel="stylesheet" href="css_login/layout.css">
+	
+</head> 
 <body>
 
-  <br> <br> <br>
-  <?php 
-
-$ip=$_SERVER['REMOTE_ADDR'];
-echo "IP address= $ip";
-echo "<br>";
-echo $_SERVER['SERVER_NAME'];
-
-
-echo "<br>";
-echo "<br>";
-
-
-
-//$mac = system('arp -an');
-//echo $mac;
-echo system('arp -an');
-
-
-?> 
-  <br> <br> <br>
-<center>
-<div id="poll">
-<h3>VOTE</h3>
-<form action = "vote_trest_index.php" method="POST">
-
-
-<h1>Aman</h1>
-
-<h3>
-1
-<input type="radio" name="aman_vote" value="1"  >
-2
-<input type="radio" name="aman_vote" value="2"  checked>
-3
-<input type="radio" name="aman_vote" value="3"  >
-</h3>
 	
-	<hr>
 
-<h1>Anurag</h1>
 
-<h3>
-1
-<input type="radio" name="anurag_vote" value="1"  >
-2
-<input type="radio" name="anurag_vote" value="2"  checked>
-3
-<input type="radio" name="anurag_vote" value="3"  >
-</h3>
+
+	<!-- Primary Page Layout -->
+
+	<div class="container">
+		
+		<div class="form-bg">
+			<form name="loginform" action="login_exec.php" method="post">
+				<h2>Trestor Voting Login</h2>
+				<p><input name="username" type="text" placeholder="Username"></p>
+				<p><input name="password" type="password" placeholder="Password"></p>
+				<label for="remember">
+<!--				  <input type="checkbox" id="remember" value="remember" />
+				  <span>Remember me on this computer</span>-->
+				</label>
+				<button type="submit"></button>
+			</form>
+		</div>
+
+                <p class="forgot">2014 &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp <a href="www.trestor.org">Trestor Foundation</a></p>
+<!--		<p class="forgot">Forgot your password? <a href="">Click here to reset it.</a></p>-->
+
+
+	</div><!-- container -->
+
+	<!-- JS  -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='js/jquery-1.5.1.min.js'>\x3C/script>")</script>
+	<script src="js/app.js"></script>
 	
-	<hr>
-
-<h1>Aritra</h1>
-
-<h3>
-1
-<input type="radio" name="aritra_vote" value="1"  >
-2
-<input type="radio" name="aritra_vote" value="2"  checked>
-3
-<input type="radio" name="aritra_vote" value="3"  >
-</h3>
-
-	<hr>
-
-<h1>Arpan</h1>
-
-<h3>
-1
-<input type="radio" name="arpan_vote" value="1"  >
-2
-<input type="radio" name="arpan_vote" value="2"  checked>
-3
-<input type="radio" name="arpan_vote" value="3"  >
-</h3>
-
-	<hr>
-
-<h1>Saurabh</h1>
-
-<h3>
-1
-<input type="radio" name="saurabh_vote" value="1"  >
-2
-<input type="radio" name="saurabh_vote" value="2"  checked>
-3
-<input type="radio" name="saurabh_vote" value="3"  >
-</h3>
-
-	<hr>
-
-<h1>Shiladitya</h1>
-
-<h3>
-1
-<input type="radio" name="shiladitya_vote" value="1"  >
-2
-<input type="radio" name="shiladitya_vote" value="2"  checked>
-3
-<input type="radio" name="shiladitya_vote" value="3"  >
-</h3>
-
-	<hr>
-
-<h1>Tushar</h1>
-
-<h3>
-1
-<input type="radio" name="tushar_vote" value="1"  >
-2
-<input type="radio" name="tushar_vote" value="2"  checked>
-3
-<input type="radio" name="tushar_vote" value="3"  >
-</h3>
-
-	<hr>
-
-<input type="submit" value="Next">
-
-</form>
-</div>
-</center>
-
-
-
-
-
+<!-- End Document -->
 </body>
 </html>
