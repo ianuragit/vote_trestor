@@ -1,17 +1,26 @@
 
 
-<?
+<?php
 
+// Making a connection to database
 require_once('connection.php');
+$i = 0  ;
 
-$q=mysql_query("select column from 'vote'",$bd);
+//Name & Variable array
+$name = array("Aman","Anurag","Aritra","Arpan","Saurabh","Shiladitya","Tushar");
+$name_vote = array("aman_vote","anurag_vote","aritra_vote","arpan_vote","saurabh_vote","shiladitya_vote","tushar_vote");
 
+//Fetching SUM from Columns
+while($i < 7) {
 
+$query = "SELECT SUM($name_vote[$i]) FROM trestor_vote"; 
+$result = mysql_query($query) or die(mysql_error());
+$row = mysql_fetch_array($result);
+echo $name[$i]." Votes ="." $row[0]"."<br>";
+$i++;
 
+} 
 
-while($rs=mysql_fetch_assoc($q))
-{
-$array= unserialize($rs['column']);
-print_r($array);
-}
+mysql_close($bd);
+
 ?>
