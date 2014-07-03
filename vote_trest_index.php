@@ -18,7 +18,7 @@ if (!mysql_query($sql)) {
 }
 echo "<br> <br> <br> <br><center> <h1>Your vote has been record added </h1> </center>";
 
-echo "<br> <br> <br> <br><center> <h3> <a href='result.php'> Result can be seen here </a></h3> </center>";
+echo "<br> <br> <br> <br><center> <h3> <a href='result_as.php'> Result can be seen here </a></h3> </center>";
 mysql_close($bd);
 
 ?>

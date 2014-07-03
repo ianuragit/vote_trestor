@@ -2,6 +2,7 @@
 
 /* 
  * Anurag Meena (ianuragit@gmail.com)
+ * Enter the database credentials here
  */
 
 
