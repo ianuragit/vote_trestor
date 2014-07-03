@@ -1,0 +1,19 @@
+The following MySQL database needs to be created manually since I haven't written the code for creating it.
+
+Database Structure
+	Database Name: trestor_vote
+		
+		Table Name: trestor_vote
+
+			Columns:
+					  Name 				Type			Default 			Extra
+					date&time 		  timestamp	   CURRENT_TIMESTAMP     
+					id                tinyint(4)       None             AUTO_INCREMENT
+					aman_vote  		  int(11)          None
+					anurag_vote 	  int(11)          None
+					aritra_vote  	  int(11)          None
+					arpan_vote  	  int(11)          None
+					saurabh_vote  	  int(11)          None
+					shiladitya_vote   int(11)          None
+					tushar_vote  	  int(11)          None
+					extra   		  int(11)          None
